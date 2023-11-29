@@ -67,7 +67,7 @@ else:
 # solution
 
 import re
-def check(s):
+def check(s):  # to check whether integer present in the string or not and to check whether any string is start with integer
     regex = '^\d+$|^\d+[a-zA-Z]$'
     if(re.search(regex, s)):
         return 1
