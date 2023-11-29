@@ -65,6 +65,31 @@
 # print(input_Str)
 # print(ans)
 
+#3 https://www.hackerrank.com/challenges/merge-the-tools/problem?isFullScreen=true
+
+# s = input("Enter your String: ")
+# k = int(input("k: "))
+# d=k
+# c= len(s)//k
+# print(d)
+# lt=[]
+# t=0
+# for i in range(c):
+#     x = s[t:k]
+#     lt.append(x)
+#     t=t+d
+#     k=k+d
+# print(lt)
+
+
+# cool=[]
+# for i in lt:
+#     l = set()
+#     for j in range(len(i)):
+#         l.add(i[j])
+#     cool.append(l)
+# print(cool)
+
 
 # # email-id: mttestacc7@gmail.com
 
@@ -141,7 +166,7 @@
 
 
 
-s = input("Enter a String: ")
+# s = input("Enter a String: ")
 # vowels=[]
 # consonants=[]
 # indvo= []

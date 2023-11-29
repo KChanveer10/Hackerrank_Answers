@@ -1,67 +1,70 @@
-# s = input("Enter your string: ")
-# vowels_dict = {}
-# const_dict = {}
+# 1st Minion's Game - medium - https://www.hackerrank.com/challenges/the-minion-game/problem?isFullScreen=true
+# Solution - {Solution is not complete yet}
 
-# for i, char in enumerate(s):
-#     if char.upper() in "AEIOU":
-#         if char not in vowels_dict:
-#             vowels_dict[char] = [i]
-#         else:
-#             vowels_dict[char].append(i)
-#     else:
-#         if char not in const_dict:
-#             const_dict[char] = [i]
-#         else:
-#             const_dict[char].append(i)
+s = input("Enter your string: ")
+vowels_dict = {}
+const_dict = {}
 
-# print("Vowels Dictionary:", vowels_dict)
-# print("Consonants Dictionary:", const_dict)
+for i, char in enumerate(s):
+    if char.upper() in "AEIOU":
+        if char not in vowels_dict:
+            vowels_dict[char] = [i]
+        else:
+            vowels_dict[char].append(i)
+    else:
+        if char not in const_dict:
+            const_dict[char] = [i]
+        else:
+            const_dict[char].append(i)
+
+print("Vowels Dictionary:", vowels_dict)
+print("Consonants Dictionary:", const_dict)
 
 
-# vow_score =0
-# for i in vowels_dict:
-#     lst = vowels_dict[i]
-#     for k in range(len(lst)):
-#         newstr=''
-#         for j in range(lst[k],len(s)):
-#             sr=0
-#             newstr = newstr +s[j]
-#             for k in range(len(s)):
-#                 c = s[k:k+len(newstr)]
-#                 if newstr ==c:
-#                     vow_score = vow_score+1
-#                     sr = sr + 1
-#             print(f"{newstr}->{sr}")  
+vow_score =0
+for i in vowels_dict:
+    lst = vowels_dict[i]
+    for k in range(len(lst)):
+        newstr=''
+        for j in range(lst[k],len(s)):
+            sr=0
+            newstr = newstr +s[j]
+            for k in range(len(s)):
+                c = s[k:k+len(newstr)]
+                if newstr ==c:
+                    vow_score = vow_score+1
+                    sr = sr + 1
+            print(f"{newstr}->{sr}")  
             
 
-# con_score =0
+con_score =0
 
-# for i in const_dict:
-#     lst = const_dict[i]
-#     for k in range(len(lst)):
-#         newstr=""
-#         for j in range(lst[k],len(s)):
-#             sr=0
-#             newstr = newstr +s[j]
-#             for k in range(len(s)):
-#                 c = s[k:k+len(newstr)]
-#                 if newstr ==c:
-#                     con_score = con_score+1
-#                     sr = sr + 1
-#             print(f"{newstr}->{sr}")
+for i in const_dict:
+    lst = const_dict[i]
+    for k in range(len(lst)):
+        newstr=""
+        for j in range(lst[k],len(s)):
+            sr=0
+            newstr = newstr +s[j]
+            for k in range(len(s)):
+                c = s[k:k+len(newstr)]
+                if newstr ==c:
+                    con_score = con_score+1
+                    sr = sr + 1
+            print(f"{newstr}->{sr}")
         
 
-# if vow_score>con_score:
-#     print(f"Kevin {vow_score}")
-# else:
-#     print(f"Stuart {con_score}") 
+if vow_score>con_score:
+    print(f"Kevin {vow_score}")
+else:
+    print(f"Stuart {con_score}") 
 
 
 
 # 2nd question -- (medium level)
 # https://www.hackerrank.com/challenges/capitalize/problem?isFullScreen=true
 
-# # solution
+# solution
 
 import re
 def check(s):
@@ -101,3 +104,20 @@ def solve():
 
 result = solve()         
 print(result)
+
+# 3rd question - Easy - https://www.hackerrank.com/challenges/text-wrap/problem?isFullScreen=true
+# solution
+
+s = input("Enter your String: ")
+k = int(input("k: "))
+d=k
+c= len(s)//k
+lt=[]
+t=0
+sol=""
+for i in range(c+1):
+    x = s[t:k]
+    sol = sol+x+"\n"
+    t=t+d
+    k=k+d
+print(sol)
