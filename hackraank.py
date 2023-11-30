@@ -121,3 +121,16 @@ for i in range(c+1):
     t=t+d
     k=k+d
 print(sol)
+
+# 4th - easy - https://www.hackerrank.com/challenges/exceptions/problem?isFullScreen=true
+
+n= int(input())
+for i in range(n): 
+    try:
+        int_values = list(map(int, input("").split()))
+        c = int_values[0]//int_values[1]
+        print(c)
+    except ZeroDivisionError as e:
+        print(f"Error Code: {e.args[0]}")
+    except ValueError as e:
+        print(f"Error Code: {e.args[0]}")

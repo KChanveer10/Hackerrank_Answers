@@ -166,7 +166,7 @@
 
 
 
-# s = input("Enter a String: ")
+s = input("Enter a String: ")
 # vowels=[]
 # consonants=[]
 # indvo= []
