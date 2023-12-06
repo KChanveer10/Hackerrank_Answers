@@ -150,5 +150,34 @@ class Solution:
                         ans.append(i)
                         ans.append(j)
                         return ans
-                        
+
+# Pattern Question asked in the Interview 
+
+'''
+n = Any odd number (Here n = 7)
+Display following output as result
+*
+**
+***
+****
+***
+**
+*
+'''
+# Solution
+
+n=int(input("Enter a odd number: "))
+t=n//2
+r=n-t
+print(t,r)
+for i in range(t):
+    for j in range(i+1):
+        print("*",end="")
+    print()
+for i in range(r):
+    for j in range(r-i):
+        print("*",end="")
+    print()
+
+
                 
