@@ -134,3 +134,21 @@ for i in range(n):
         print(f"Error Code: {e.args[0]}")
     except ValueError as e:
         print(f"Error Code: {e.args[0]}")
+
+
+# 5th - easy - https://leetcode.com/problems/two-sum/
+
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        num=nums
+        tar = target
+        ans= []
+        for i in range(len(num)):
+            for j in range(len(num)):
+                if (num[j]+num[i]==tar):
+                    if (i<j):
+                        ans.append(i)
+                        ans.append(j)
+                        return ans
+                        
+                
